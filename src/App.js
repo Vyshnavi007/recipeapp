@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-
+//2920a8b31713467d8c5bcc203a0cf313
+import Pages from "./Pages/Pages";
+import Category from "./Components/Category";
+import Searchbar from "./Components/Searchbar";
+import logo from "./logo.png"
+import { Link } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=" bg-black min-h-screen text-class relative">
+      <Link to="/"><img src={logo} alt="logo" className="w-28 relative top-3 left-44"/></Link>
+      <Searchbar/>
+      <Category/>
+      <Pages/>
     </div>
   );
 }
